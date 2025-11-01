@@ -1,6 +1,6 @@
-name = "cybersoft-backend"
+name = "cybersoftbackend"
 main = "src/index.ts"
-compatibility_date = "2024-11-01"
+compatibility_date = "2025-11-01"
 
 # Worker will be available at: https://cybersoft-contact-backend.your-subdomain.workers.dev
 # Or you can bind it to your custom domain
@@ -15,8 +15,11 @@ compatibility_date = "2024-11-01"
 #   { pattern = "api.cybersoft.az/api/contact", zone_name = "cybersoft.az" }
 # ]
 
-# Or use a custom domain
-# route = "api.cybersoft.az/api/contact"
+#Or use a custom domain
+#route = "api.cybersoft.az/api/contact"
+routes = [
+  { pattern = "api.cybersoft.az/api/contact", zone_name = "cybersoft.az" }
+]
 
 # Workers AI (if needed in the future)
 # [ai]

@@ -280,7 +280,7 @@ async function sendEmail(data: ContactFormData, env: Env): Promise<{ success: bo
   const projectTypeLabel = PROJECT_TYPES[data.projectType] || data.projectType;
   
   try {
-    const response = await fetch('https://api.resend.com/emails', {
+    const response = await fetch("https://cybersoftbackend.cybersoftmmc.workers.dev/api/contact", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
