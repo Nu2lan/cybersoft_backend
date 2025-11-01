@@ -1,0 +1,47 @@
+name = "cybersoft-backend"
+main = "src/index.ts"
+compatibility_date = "2024-11-01"
+
+# Worker will be available at: https://cybersoft-contact-backend.your-subdomain.workers.dev
+# Or you can bind it to your custom domain
+
+# Environment variables (add these via Wrangler CLI or Cloudflare Dashboard)
+# RESEND_API_KEY = "re_xxxxxxxxxxxx"  # Add via: wrangler secret put RESEND_API_KEY
+# ALLOWED_ORIGINS = "https://cybersoft.az,https://www.cybersoft.az"
+
+# Routes (optional - if you want to bind to your domain)
+# Uncomment and configure if you want to use a custom domain
+# routes = [
+#   { pattern = "api.cybersoft.az/api/contact", zone_name = "cybersoft.az" }
+# ]
+
+# Or use a custom domain
+# route = "api.cybersoft.az/api/contact"
+
+# Workers AI (if needed in the future)
+# [ai]
+# binding = "AI"
+
+# KV Namespaces (if you need to store data)
+# [[kv_namespaces]]
+# binding = "CONTACT_LOGS"
+# id = "your-kv-namespace-id"
+
+# Durable Objects (if you need stateful backend)
+# [[durable_objects.bindings]]
+# name = "RATE_LIMITER"
+# class_name = "RateLimiter"
+
+# Analytics Engine (for tracking submissions)
+# [[analytics_engine_datasets]]
+# binding = "CONTACT_ANALYTICS"
+
+# Development settings
+[env.development]
+name = "cybersoft-contact-backend-dev"
+# vars = { ALLOWED_ORIGINS = "http://localhost:3000,http://localhost:8788" }
+
+# Production settings
+[env.production]
+name = "cybersoft-contact-backend"
+# vars = { ALLOWED_ORIGINS = "https://cybersoft.az,https://www.cybersoft.az" }
