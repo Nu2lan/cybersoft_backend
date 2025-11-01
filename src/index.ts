@@ -280,14 +280,14 @@ async function sendEmail(data: ContactFormData, env: Env): Promise<{ success: bo
   const projectTypeLabel = PROJECT_TYPES[data.projectType] || data.projectType;
   
   try {
-    const response = await fetch("https://cybersoftbackend.cybersoftmmc.workers.dev/api/contact", {
+    const response = await fetch("https://api.cybersoft.az/api/contact", {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
         'Authorization': `Bearer ${env.RESEND_API_KEY}`,
       },
       body: JSON.stringify({
-        from: 'CyberSoft Contact Form <noreply@cybersoft.az>',
+        from: 'CyberSoft <noreply@cybersoft.az>',
         to: ['sales@cybersoft.az'],
         reply_to: data.email,
         subject: `New Contact: ${data.name} - ${projectTypeLabel}`,
