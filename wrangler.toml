@@ -15,8 +15,8 @@ compatibility_date = "2024-11-01"
 #   { pattern = "api.cybersoft.az/api/contact", zone_name = "cybersoft.az" }
 # ]
 
-# Or use a custom domain
-# route = "api.cybersoft.az/api/contact"
+Or use a custom domain
+route = "api.cybersoft.az/api/contact"
 
 # Workers AI (if needed in the future)
 # [ai]
