@@ -1,7 +1,5 @@
 # CyberSoft Contact Backend - Cloudflare Worker
 
-A serverless backend API for handling contact form submissions from cybersoft.az, built with Cloudflare Workers and Resend email API.
-
 ## 🚀 Features
 
 - ✅ **Serverless**: Runs on Cloudflare's global edge network
